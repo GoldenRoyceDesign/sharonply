@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/:page.html",
+      "destination": "/:page",
+      "permanent": true
+    }
+  ]
+}

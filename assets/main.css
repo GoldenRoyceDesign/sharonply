@@ -1,0 +1,11 @@
+.nav-link {
+  font-weight: 500;
+  color: #333;
+}
+.nav-link:hover {
+  color: #007BFF;
+}
+
+.dropdown-menu {
+  min-width: 200px;
+}
