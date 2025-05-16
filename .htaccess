@@ -1,11 +1,26 @@
-# Enable Rewrite Engine
 RewriteEngine On
+RewriteBase /
 
-# Remove .html extension from URLs
+# Remove .html extension for ALL pages, including nested ones
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+# Handle trailing slash on directories if needed
+RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.html -f
-RewriteRule ^([^/]+)/?$ $1.html [L]
+RewriteRule ^(.+)/$ /$1 [R=301,L]
 
-# Redirect URLs with .html to extensionless (SEO friendly)
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+(.+)\.html\sHTTP/
-RewriteRule ^(.+)\.html$ /$1 [R=301,L]
+
+
+#For live server
+# RewriteEngine On
+# RewriteBase /
+
+# # Clean URLs (remove .html extension)
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteRule ^([^/]+)$ $1.html [L]
+
+# # Also handle nested folders like /plywood/sharon-platinum-ply
+# RewriteCond %{REQUEST_FILENAME}.html -f
+# RewriteRule ^(.*)/$ $1.html [L]

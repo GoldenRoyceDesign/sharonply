@@ -1,11 +1,343 @@
 .nav-link {
   font-weight: 500;
   color: #333;
+  font-size: 12px;
 }
+
 .nav-link:hover {
   color: #007BFF;
 }
 
+.dropdown-item {
+  font-weight: 500;
+  color: #333;
+  font-size: 12px;
+}
+
+
 .dropdown-menu {
   min-width: 200px;
+}
+
+/* Show submenu to the right */
+.dropdown-menu .dropdown-menu {
+  left: 100%;
+  top: 0;
+  margin-left: 0.1rem;
+}
+
+
+/* Show dropdown on hover */
+.nav-item.plywooddrop:hover .plywoodsub {
+  display: block;
+}
+
+/* Optional: smooth display */
+.dropdown-menu {
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-link.active {
+  color: #00793A !important;
+  /* or your highlight color */
+  font-weight: 700;
+}
+
+.dropdown-item .active {
+  color: #00793A !important;
+  /* or your highlight color */
+  font-weight: 700;
+}
+
+
+/* Home page - Carousel style */
+.carousel .carousel-item {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.carousel .explore-btn {
+  position: absolute;
+  bottom: 130px;
+  left: 150px;
+  z-index: 10;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  background-image:
+    linear-gradient(white, white),
+    /* inner fill */
+    linear-gradient(to right, #00793A, #ffc107);
+  /* border gradient */
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+
+.carousel .explore-btn a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #ff0;
+  color: #00793A;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 10px 20px;
+  border: 3px solid white;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.carousel .explore-btn a:hover {
+  background-color: #ffc107;
+}
+
+.carousel .arrow-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #fff;
+  color: #FFDD02;
+  font-size: 24px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+
+.carousel .small-nav-icon {
+  background-color: #FFDD02;
+  border-radius: 50%;
+  width: 30px;
+  /* smaller width */
+  height: 30px;
+  /* smaller height */
+  background-size: 50% 50%;
+}
+
+
+/* Home page - Product section style */
+
+.product-section {
+  width: 100%;
+  overflow: hidden;
+}
+
+.product-section h4 {
+  color: #00793A;
+  font-weight: bold;
+}
+
+.product-section .product-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.product-section .tab-card {
+  width: 130px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 6px;
+  background: #fff;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+.product-section .tab-card img {
+  width: 100%;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.product-section .tab-card span {
+  display: block;
+  margin-top: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+}
+
+.product-section .tab-card.active {
+  border: 2px solid #ffc107;
+  background-color: #fffdd0;
+}
+
+.product-section .tab-card.active span{
+  color: #00793A;
+}
+
+
+.product-section .explore-btn {
+  margin-top: 20px;
+  width: fit-content;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  background-image:
+    linear-gradient(white, white),
+    /* inner fill */
+    linear-gradient(to right, #00793A, #ffc107);
+  /* border gradient */
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.product-section .explore-btn a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #ff0;
+  color: #00793A;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 10px 20px;
+  border: 3px solid white;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.product-section .arrow-circle {
+  background: #fff;
+  color: #ffc107;
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 14px;
+}
+
+/* Serve section style */
+.serve {
+  background-image: url('/assets/images/serve-bg.png');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+
+/* Home-about section style */
+.about {
+  background-image: url('/assets/images/home-about-bg.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.about h3,
+h6,
+span {
+  color: #00793A;
+}
+
+
+/* Testimonial section style */
+.testimonial-wrapper {
+  display: none;
+}
+
+.testimonial-wrapper.active {
+  display: block;
+}
+
+.testimonial-card {
+  background: linear-gradient(to right,#4f8220 0%, #035B2D 28%, #035B2D 81%, #4f8220 100%);
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.video-thumb {
+  position: relative;
+  width: 100%;
+  max-width: 280px;
+  cursor: pointer;
+}
+
+.video-thumb img {
+  border-radius: 10px;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  padding: 10px 14px;
+  color: white;
+  font-size: 20px;
+}
+
+.stars {
+  color: gold;
+  background: linear-gradient(to right, rgb(255, 255, 255, 0.3), rgb(102, 102, 102, 0.3));
+  padding: 0px 8px;
+  border-radius: 20px;
+  font-size: 22px;
+}
+
+.slider-dots {
+  height: 5px;
+  background-color: white;
+  width: 20px;
+  display: inline-block;
+  margin: 0 3px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.slider-dots.active {
+  opacity: 1;
+}
+
+
+/* Icons style */
+
+.sticky-icons {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sticky-icons .icon {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.sticky-icons .icon:hover {
+  background-color: #ffc107;
+  transform: scale(1.1);
+}
+
+
+@media screen and (max-width: 768px) {
+  .product-section .col-md-6>div {
+    gap: 10px !important;
+  }
 }
