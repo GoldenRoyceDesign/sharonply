@@ -83,3 +83,16 @@ document.addEventListener("DOMContentLoaded", function () {
       track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
     };
   });
+
+
+   function openYouTubeModal(videoUrl) {
+    const iframe = document.getElementById('galleryModalIframe');
+    iframe.src = videoUrl + "?autoplay=1";  // autoplay when opened
+    const modal = new bootstrap.Modal(document.getElementById('galleryVideoModal'));
+    modal.show();
+
+    // Stop video when modal is closed
+    document.getElementById('galleryVideoModal').addEventListener('hidden.bs.modal', () => {
+      iframe.src = '';
+    });
+  }

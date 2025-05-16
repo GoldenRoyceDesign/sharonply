@@ -302,6 +302,12 @@ span {
 }
 
 
+/* Video section style */
+#videoTrack img{
+  cursor: pointer;
+}
+
+
 /* Icons style */
 
 .sticky-icons {

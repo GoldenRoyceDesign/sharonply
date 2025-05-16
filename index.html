@@ -403,8 +403,10 @@
                 <div class="row g-4 align-items-stretch">
                     <div class="col-md-3 d-flex align-items-stretch">
                         <div class="video-thumb h-100 w-100" data-bs-toggle="modal" data-bs-target="#videoModal3">
+                            <div class="video-wrapper position-relative">
                             <img src="assets/images/testimonial3.png" alt="Client 3"
                                 class="w-100 h-100 object-fit-cover rounded">
+                                </div>
                             <div class="play-button">&#9658;</div>
                         </div>
                     </div>
@@ -504,7 +506,10 @@
                     <div id="videoTrack" class="d-flex transition" style="width: max-content;">
                         <!-- video 1 -->
                         <div class="video-card card me-3 shadow-sm border-0" style="width: 285px;">
-                            <img src="assets/images/video1.png" class="card-img-top" alt="Video 1">
+                            <div class="video-card"
+                                onclick="openYouTubeModal('https://www.youtube.com/embed/VIDEO_ID')">
+                                <img src="assets/images/video1.png" class="card-img-top" alt="Video 1" />
+                            </div>
                             <div class="card-body">
                                 <h6 class="card-title mb-2">Lorem Ipsum is simply dummy text print</h6>
                                 <div class="d-flex justify-content-between text-muted small">
@@ -516,7 +521,10 @@
 
                         <!-- video 2 -->
                         <div class="video-card card me-3 shadow-sm border-0" style="width: 285px;">
-                            <img src="assets/images/video2.png" class="card-img-top" alt="Video 2">
+                            <div class="video-card"
+                                onclick="openYouTubeModal('https://www.youtube.com/embed/VIDEO_ID')">
+                                <img src="assets/images/video2.png" class="card-img-top" alt="Video 2">
+                            </div>
                             <div class="card-body">
                                 <h6 class="card-title mb-2">Lorem Ipsum is simply dummy text print</h6>
                                 <div class="d-flex justify-content-between text-muted small">
@@ -528,7 +536,10 @@
 
                         <!-- video 3 -->
                         <div class="video-card card me-3 shadow-sm border-0" style="width: 285px;">
-                            <img src="assets/images/video3.png" class="card-img-top" alt="Video 3">
+                            <div class="video-card"
+                                onclick="openYouTubeModal('https://www.youtube.com/embed/VIDEO_ID')">
+                                <img src="assets/images/video3.png" class="card-img-top" alt="Video 3">
+                            </div>
                             <div class="card-body">
                                 <h6 class="card-title mb-2">Lorem Ipsum is simply dummy text print</h6>
                                 <div class="d-flex justify-content-between text-muted small">
@@ -540,7 +551,10 @@
 
                         <!-- video 4 -->
                         <div class="video-card card me-3 shadow-sm border-0" style="width: 285px;">
-                            <img src="assets/images/video1.png" class="card-img-top" alt="Video 4">
+                            <div class="video-card"
+                                onclick="openYouTubeModal('https://www.youtube.com/embed/VIDEO_ID')">
+                                <img src="assets/images/video1.png" class="card-img-top" alt="Video 4">
+                            </div>
                             <div class="card-body">
                                 <h6 class="card-title mb-2">Lorem Ipsum is simply dummy text print</h6>
                                 <div class="d-flex justify-content-between text-muted small">
@@ -553,7 +567,10 @@
 
                         <!-- video 5 -->
                         <div class="video-card card me-3 shadow-sm border-0" style="width: 285px;">
-                            <img src="assets/images/video2.png" class="card-img-top" alt="Video 5">
+                            <div class="video-card"
+                                onclick="openYouTubeModal('https://www.youtube.com/embed/VIDEO_ID')">
+                                <img src="assets/images/video2.png" class="card-img-top" alt="Video 5">
+                            </div>
                             <div class="card-body">
                                 <h6 class="card-title mb-2">Lorem Ipsum is simply dummy text print</h6>
                                 <div class="d-flex justify-content-between text-muted small">
@@ -567,7 +584,10 @@
 
                         <!-- video 6 -->
                         <div class="video-card card me-3 shadow-sm border-0" style="width: 285px;">
-                            <img src="assets/images/video3.png" class="card-img-top" alt="Video 6">
+                            <div class="video-card"
+                                onclick="openYouTubeModal('https://www.youtube.com/embed/VIDEO_ID')">
+                                <img src="assets/images/video3.png" class="card-img-top" alt="Video 6">
+                            </div>
                             <div class="card-body">
                                 <h6 class="card-title mb-2">Lorem Ipsum is simply dummy text print</h6>
                                 <div class="d-flex justify-content-between text-muted small">
@@ -587,6 +607,25 @@
             </div>
         </div>
 
+
+        <!-- YouTube Video Modal -->
+        <div class="modal fade" id="galleryVideoModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content bg-dark position-relative">
+
+                    <!-- Close Button -->
+                    <button type="button" class="btn-close btn-close-white position-absolute"
+                        style="top: 1rem; right: 1rem; z-index: 1055;" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+
+                    <!-- Embedded YouTube Video -->
+                    <div class="modal-body p-0 ratio ratio-16x9">
+                        <iframe id="galleryModalIframe" class="w-100 h-100 border-0" src="" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
     </section>
 
 
