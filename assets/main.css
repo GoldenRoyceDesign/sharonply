@@ -1,3 +1,12 @@
+/* Home page */
+/* Carousel style */
+/* Product section style */
+/* Serve section style */
+/* Home-about section style */
+/* Testimonial section style */
+/* Video section style */
+
+
 .nav-link {
   font-weight: 500;
   color: #333;
@@ -19,7 +28,7 @@
   min-width: 200px;
 }
 
-/* Show submenu to the right */
+/* submenu to the right */
 .dropdown-menu .dropdown-menu {
   left: 100%;
   top: 0;
@@ -27,25 +36,22 @@
 }
 
 
-/* Show dropdown on hover */
+/* dropdown on hover */
 .nav-item.plywooddrop:hover .plywoodsub {
   display: block;
 }
 
-/* Optional: smooth display */
 .dropdown-menu {
   transition: all 0.2s ease-in-out;
 }
 
 .nav-link.active {
   color: #00793A !important;
-  /* or your highlight color */
   font-weight: 700;
 }
 
-.dropdown-item .active {
+.dropdown-item.active {
   color: #00793A !important;
-  /* or your highlight color */
   font-weight: 700;
 }
 
@@ -114,9 +120,7 @@
   background-color: #FFDD02;
   border-radius: 50%;
   width: 30px;
-  /* smaller width */
   height: 30px;
-  /* smaller height */
   background-size: 50% 50%;
 }
 
@@ -171,7 +175,7 @@
   background-color: #fffdd0;
 }
 
-.product-section .tab-card.active span{
+.product-section .tab-card.active span {
   color: #00793A;
 }
 
@@ -226,6 +230,8 @@
 }
 
 
+
+
 /* Home-about section style */
 .about {
   background-image: url('/assets/images/home-about-bg.png');
@@ -250,7 +256,7 @@ span {
 }
 
 .testimonial-card {
-  background: linear-gradient(to right,#4f8220 0%, #035B2D 28%, #035B2D 81%, #4f8220 100%);
+  background: linear-gradient(to right, #4f8220 0%, #035B2D 28%, #035B2D 81%, #4f8220 100%);
   color: white;
   border-radius: 10px;
   padding: 20px;
@@ -301,12 +307,10 @@ span {
   opacity: 1;
 }
 
-
 /* Video section style */
-#videoTrack img{
+#videoTrack img {
   cursor: pointer;
 }
-
 
 /* Icons style */
 

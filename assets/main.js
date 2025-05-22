@@ -3,27 +3,27 @@ const products = [
     {
         title: "Plywood",
         desc: "Premium quality plywood for long-lasting durability.",
-        image: "assets/images/default-product.png"
+        image: "assets/images/product1.png"
     },
     {
         title: "Prelam",
         desc: "Stylish and ready-to-use prelam boards.",
-        image: "assets/images/product1.png"
+        image: "assets/images/product2.png"
     },
     {
         title: "Teak",
         desc: "Natural teak wood sheets for elegant finish.",
-        image: "assets/images/product2.png"
+        image: "assets/images/product3.png"
     },
     {
         title: "Veneer",
         desc: "Decorative veneer sheets in various patterns.",
-        image: "assets/images/product3.png"
+        image: "assets/images/product4.png"
     },
     {
         title: "Door",
         desc: "Sturdy and aesthetic ready-made doors.",
-        image: "assets/images/product4.png"
+        image: "assets/images/default-product.png"
     }
 ];
 
@@ -85,7 +85,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
-   function openYouTubeModal(videoUrl) {
+
+ function openYouTubeModal(videoUrl) {
     const iframe = document.getElementById('galleryModalIframe');
     iframe.src = videoUrl + "?autoplay=1";  // autoplay when opened
     const modal = new bootstrap.Modal(document.getElementById('galleryVideoModal'));
@@ -96,3 +97,40 @@ document.addEventListener("DOMContentLoaded", function () {
       iframe.src = '';
     });
   }
+
+
+const counters = document.querySelectorAll('.count-number');
+
+  const animateCount = (el) => {
+    const target = +el.getAttribute('data-target');
+    let count = 0;
+
+    const update = () => {
+      const increment = target / 100;
+      if (count < target) {
+        count += increment;
+        el.innerText = `${Math.ceil(count)}%`;
+        requestAnimationFrame(update);
+      } else {
+        el.innerText = `${target}%`;
+      }
+    };
+
+    update();
+  };
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const counter = entry.target;
+        animateCount(counter);
+        observer.unobserve(counter); // Run only once
+      }
+    });
+  }, {
+    threshold: 0.5 // triggers when 50% is visible
+  });
+
+  counters.forEach(counter => {
+    observer.observe(counter);
+  });
