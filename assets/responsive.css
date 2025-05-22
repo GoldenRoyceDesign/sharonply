@@ -1,4 +1,29 @@
 @media screen and (max-width: 767px) {
+    .home .carousel-item{
+        background-image: url('/assets/images/banner-mobileview.png') !important;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .carousel .carousel-title{
+        display: block !important;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center !important;
+        align-items: center !important;
+        color: white;
+        margin-top: -70px !important;
+    }
+
+    .carousel .carousel-title h1{
+        font-size: 40px;
+        font-weight: bold;
+    }
+
     .product-section > .row .col-md-7 {
         padding: 0 !important;
     }

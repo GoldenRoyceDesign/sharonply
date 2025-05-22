@@ -64,6 +64,10 @@
   position: relative;
 }
 
+.carousel .carousel-title{
+  display: none !important;
+}
+
 .carousel .explore-btn {
   position: absolute;
   bottom: 130px;
