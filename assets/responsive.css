@@ -23,6 +23,9 @@
         font-size: 40px;
         font-weight: bold;
     }
+    .carousel .carousel-title p{
+        margin-top: 30px !important;
+    }
 
     .product-section > .row .col-md-7 {
         padding: 0 !important;
