@@ -46,3 +46,8 @@
 }
 
 
+@media screen and (max-width: 380px) {
+     .video-card{
+        width: 240px !important;
+    }
+}
